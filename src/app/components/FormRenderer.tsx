@@ -13,13 +13,6 @@ interface Section {
   properties?: Properties;
 }
 
-interface FormSchema {
-  title: string;
-  description?: string;
-  type: string;
-  properties: { [key: string]: InputSchema }
-}
-
 interface FormRendererProps {
   schema: any;
 }
@@ -74,10 +67,10 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
       {schema.description && <p className='form-description'><i>{schema.description}</i></p>}
 
       <form>
-        {sections.map((section,index) => (
-            <section key={index} style={{ border: '1px solid #ccc', marginBottom: '20px', padding: '10px', overflow: 'auto', maxWidth: '100%' }}>
-              {section.label && <h2>{section.label}</h2>}              
-              {section.properties && Object.entries(section.properties).map(([fieldKey, fieldValue]) => {
+        {sections.map((section) => (
+            <section key={section.label} style={{ border: '1px solid #ccc', marginBottom: '20px', padding: '10px', overflow: 'auto', maxWidth: '100%' }}>
+              {section.label && <h2>{section.label}</h2>}
+              {section.properties && Object.entries(section.properties).map(([fieldKey, fieldValue]) => {               
                 let subInputSchema:InputSchema = fieldValue as InputSchema;
                 if (fieldValue.properties){
                   subInputSchema = fieldValue as InputSchema;
@@ -102,7 +95,7 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
                   );
                 }
                 return (
-                    <InputField fieldName={fieldKey} schema={fieldValue} value={formData[fieldKey] || ''} onChange={handleInputChange} />
+                    <InputField key={fieldKey} fieldName={fieldKey} schema={fieldValue} value={formData[fieldKey] || ''} onChange={handleInputChange} />
                 );
                 
               })}
