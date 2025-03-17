@@ -5,11 +5,11 @@ import { schemas, SchemaNames } from '@/schemas';
 
 interface PageProps {
   params: {
-    formName: string[];
+    formName: string;
   };
 }
-export default async function Page({ params }: PageProps) {
-  const formName = await params.formName?.[0] ;
+export default function FormPage({ params }: PageProps) {
+  const formName = params.formName;
 
     if (!formName || !Object.keys(schemas).includes(formName)) {
         return notFound();
