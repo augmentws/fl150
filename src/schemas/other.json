@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Suggest Additional Forms",
+  "description": "Form for suggesting other questions",
+  "type": "object",
+  "isSection": false,
+  "properties": {
+    "suggestion": {
+      "label": "Suggestion",
+      "type": "object",
+      "isSection": true,
+      "properties": {
+        "question": {
+          "type": "string",
+          "label": "Add the forms you would like to have filled",
+          "description": "Please be as descriptive as possible.",
+          "isSection": false
+        }
+      },
+       "required": [
+        "question"
+      ]
+    }
+  },
+  "required": [
+    "suggestion"
+  ]
+}
