@@ -84,7 +84,7 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
                     
                 }
                   if (subInputSchema.type === 'array' && subInputSchema.items) {
-                    return (<div key={fieldKey} className='form-input-container'>
+                    return (<div key={fieldKey} className='table-form-input-container'>
                         <ArrayInputField
                             properties={subInputSchema.items.properties} data={formData[fieldKey] || []}
                             onChange={(data: Record<string, string>[]) => handleArrayChange(fieldKey, data)}
@@ -102,9 +102,7 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
                   );
                 }
                 return (
-                  <div key={fieldKey} className='form-input-container'>
                     <InputField fieldName={fieldKey} schema={fieldValue} value={formData[fieldKey] || ''} onChange={handleInputChange} />
-                  </div>
                 );
                 
               })}

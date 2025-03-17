@@ -20,14 +20,14 @@ const InputField: React.FC<InputFieldProps> = ({ fieldName, schema, value, onCha
   const label = schema.label !== undefined ? schema.label : fieldName;
 
   return (
-    <div key={fieldName}>
+    <div key={fieldName} className='form-input-container'>
         <label htmlFor={fieldName}>{label}:</label>
-      <input
-        type={schema.type === 'number' ? 'number' : 'text'}
-        id={fieldName}
-        value={value}
-        onChange={handleChange}
-      />
+        <input
+          type={schema.type === 'number' ? 'number' : 'text'}
+          id={fieldName}
+          value={value}
+          onChange={handleChange}
+        />
     </div>
   );
 };

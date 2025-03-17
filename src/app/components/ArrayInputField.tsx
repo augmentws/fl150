@@ -58,7 +58,7 @@ const ArrayInputField: React.FC<ArrayInputFieldProps> = ({ properties, data , on
         ))}
       </tbody>
     </table>
-     <button type="button" onClick={handleAddRow}>add row +</button>
+     <button type="button" className='add-row-button' onClick={handleAddRow}>add row +</button>
      </div>
   );
 };
