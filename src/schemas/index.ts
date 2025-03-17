@@ -6,7 +6,7 @@ export type SchemaNames =
     | 'fl150'
     | 'other';
 
-export const schemas: { [key in SchemaNames]: Schema } = {
+export const schemas: Record<string, Schema> = {
   fl150: fl150,
   other: other,
 };

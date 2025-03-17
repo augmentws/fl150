@@ -76,7 +76,7 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
                   subInputSchema = fieldValue as InputSchema;
                     
                 }
-                  if (subInputSchema.type === 'array' && subInputSchema.items) {
+                  if (subInputSchema.type === 'array' && subInputSchema.items && subInputSchema.items.properties) {
                     return (<div key={fieldKey} className='table-form-input-container'>
                         <ArrayInputField
                             properties={subInputSchema.items.properties} data={formData[fieldKey] || []}

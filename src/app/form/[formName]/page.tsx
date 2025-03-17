@@ -2,32 +2,53 @@ import { notFound } from 'next/navigation';
 import FormRenderer from '@/app/components/FormRenderer';
 import Link from 'next/link';
 import { schemas, SchemaNames } from '@/schemas';
+import type { Metadata } from 'next'
+ 
+type Props = {
+  params: Promise<{ formName: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+export function generateStaticParams() {
+  return Object.keys(schemas).map((schemaName) => ({
+    formName: schemaName,
+  }));
+}
 
-interface PageProps {
-  params: {
-    formName: string;
+export async function generateMetadata(
+  { params }: Props
+): Promise<Metadata> {
+  // read route params
+  const { formName } = await params
+const schema = schemas[formName];
+if (!schema) {
+  return {
+    title: 'Form Not Found',
+    description: `The form "${formName}" does not exist.`,
   };
 }
-export default function FormPage({ params }: PageProps) {
-  const formName = params.formName;
+return {
+  title: `Fill out the ${schema.title} Form`,
+  description: `Complete the ${schema.title} form quickly and easily.`,
+};
+}
 
-    if (!formName || !Object.keys(schemas).includes(formName)) {
-        return notFound();
-      }
-      
+export default async function FormPage({ params }:Props) {
+  const { formName } = await params;
+
+  if (!formName || !Object.keys(schemas).includes(formName)) {
+    return notFound();
+  }
+
   const schema = schemas[formName as SchemaNames];
-  
+
   if (!schema) {
     return notFound();
   }
 
   return (
     <div>
-      <Link href="/">
-        Home
-      </Link>
+      <Link href="/">Home</Link>
       <FormRenderer schema={schema} />
     </div>
   );
-  
 }

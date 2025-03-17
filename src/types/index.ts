@@ -25,5 +25,6 @@ export interface FormSchema extends Schema{
 }
 export interface Schema {
   properties: Properties;
+  title?:string;
   $schema: string;
 }
