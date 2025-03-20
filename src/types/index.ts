@@ -3,7 +3,7 @@ export interface InputSchema {
   description?: string;
   properties?: Properties;
   enum?:string[];
-  inputType: string;
+  inputType?: string;
   items?: {
       properties?: Properties
   };
