@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import FormRenderer from '@/app/components/FormRenderer';
+import FormRenderer from '@/components/FormRenderer';
 import Link from 'next/link';
 import { schemas, SchemaNames } from '@/schemas';
 import type { Metadata } from 'next'
@@ -47,7 +47,6 @@ export default async function FormPage({ params }:Props) {
 
   return (
     <div>
-      <Link href="/">Home</Link>
       <FormRenderer schema={schema} />
     </div>
   );

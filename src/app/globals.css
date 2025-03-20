@@ -1,109 +1,50 @@
 @import "tailwindcss";
 
-:root {
+
+:root[data-theme='light'] {
   --background: #f8fafc;
   --foreground: #334155;
   --accent: #e5e7eb;
   --accent-foreground: #475569;
   --border: #cbd5e1;
+  --aside-background: #ffffff; /* White background for aside in light mode */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
+html[data-theme='dark'] {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #1f2937;
+    --accent-foreground: #e5e7eb;
+    --border: #374151;
+    --aside-background: #0a0a0a; /* Dark background for aside in dark mode */
   }
-}
-
-h1 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-
-h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-}
-
-body {
-  padding: 2rem;
-  background: var(--background);
-  color: var(--foreground);
-}
-
-
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-th, td {
-  border: 1px solid var(--border);
-  border-color: white;
-  padding: 0.5rem;
-  text-align: left;
-}
-
-th {
-  font-size: 0.75rem;
-  color: white;
-}
-.add-row-button {
+html.light body header{
   background-color: white;
-  color: black;
-  font-weight: bold;
-  padding: 2px 8px 2px 8px;
-  margin-top: 5px;
-}
-
-td input { 
-  width: 100%;
-  color: inherit;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin: 5px 0px 0px 0px;
-  border: none;
-  outline: none; 
-  box-sizing: border-box;
-}
-
-input {background-color: #475569; margin-left: 20px;}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 .form-input-container {
-  height: 30px;
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 100%; 
 }
 
-.form-input-container label{
+.form-input-container label {
   margin-right: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .form-input-container > input {
-  flex-grow: 1;
-  margin: 0;
+    margin: 0.1rem;
 }
 
-body {  background: var(--background);  color: var(--foreground);  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  padding: 2rem; }
-input { margin: 20px; background-color: #475569; }
+html[data-theme='dark'] {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --accent: #1f2937;
+    --accent-foreground: #e5e7eb;
+    --border: #374151;
+    --aside-background: #0a0a0a; /* Dark background for aside in dark mode */
+  }
 

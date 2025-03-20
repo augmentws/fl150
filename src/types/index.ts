@@ -18,6 +18,7 @@ export type Properties = {
 export interface Section {
   label: string;
   properties: Properties;
+  description?: string;
 }
 export interface FormSchema extends Schema{
   title?: string;

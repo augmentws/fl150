@@ -1,810 +1,964 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "FL-150 Income and Expense Declaration",
-  "description": "JSON Schema representation of the FL-150 form fields. with structured keys and labels.",
+  "description": "JSON Schema representation of the FL-150 form with structured keys and labels.",
   "type": "object",
-  "displayType":"Form",
-  "properties": {
-    "employment": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "employer": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Employer Name",
-          "label": "a. Employer"
-        },
-        "employers_address": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Employer Address",
-          "label": "b. Employer's address"
-        },
-        "employers_phone_number": {
-          "type": "string",
-          "displayType": "Input",
-          "format": "phone",
-          "description": "Employer Phone Number",
-          "label": "c. Employer's phone number"
-        },
-        "occupation": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Occupation",
-          "label": "d. Occupation"
-        },
-        "date_job_started": {
-          "type": "string",
-          "displayType": "Input",
-          "format": "date",
-          "description": "Job Start Date",
-          "label": "e. Date job started"
-        },
-        "if_unemployed_date_job_ended": {
-          "type": "string",
-          "displayType": "Input",
-          "format": "date",
-          "description": "Job End Date (if unemployed)",
-          "label": "f. If unemployed, date job ended"
-        },
-        "i_work_about_hours_per_week": {
-          "type": "number",
-          "description": "Hours Worked per Week",
-          "displayType": "Input",
-          "label": "g. I work about hours per week"
-        },
-        "i_get_paid__gross_before_taxes_per_month": {
-          "type": "number",
-          "description": "Gross Monthly Pay",
-          "displayType": "Input",
-          "label": "h. I get paid $ gross (before taxes) per month"
-        },
-        "i_get_paid__gross_before_taxes_per_week": {
-          "type": "number",
-          "description": "Gross Weekly Pay",
-          "displayType": "Input",
-          "label": "h. I get paid $ gross (before taxes) per week"
-        },
-        "i_get_paid__gross_before_taxes_per_hour": {
-          "type": "number",
-          "description": "Gross Hourly Pay",
-          "label": "h. I get paid $ gross (before taxes) per hour"
-        }
-      },
-      "required": [
-        "employer",
-        "employers_address",
-        "employers_phone_number",
-        "occupation",
-        "date_job_started",
-        "i_work_about_hours_per_week"
-      ],
-      "label": "1. Employment"
-    },
-    "age_and_education": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "my_age_is_specify": {
-          "type": "integer",
-          "displayType": "Input",
-          "description": "Age",
-          "label": "a. My age is (specify)"
-        },
-        "i_have_completed_high_school_or_the_equivalent": {
-          "type": "boolean",
-          "displayType": "Input",
-          "description": "High School Completion",
-          "label": "b. I have completed high school or the equivalent"
-        },
-        "number_of_years_of_college_completed_specify": {
-          "type": "integer",
-          "displayType": "Input",
-          "description": "Years of College Completed",
-          "label": "c. Number of years of college completed (specify)"
-        },
-        "number_of_years_of_graduate_school_completed_specify": {
-          "type": "integer",
-          "displayType": "Input",
-          "description": "Years of Graduate School Completed",
-          "label": "d. Number of years of graduate school completed (specify)"
-        },
-        "i_have_professionaloccupational_licenses_specify": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Professional Licenses",
-          "label": "e. I have professional/occupational license(s) (specify)"
-        },
-        "i_have_vocational_training_specify": {
-          "type": "string",
-          "description": "Vocational Training",
-          "label": "e. I have vocational training (specify)"
-        }
-      },
-      "required": [
-        "my_age_is_specify",
-        "i_have_completed_high_school_or_the_equivalent"
-      ],
-      "label": "2. Age and education"
-    },
-    "tax_information": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "i_last_filed_taxes_for_tax_year_specify_year": {
-          "type": "integer",
-          "displayType": "Input",
-          "description": "Tax Year",
-          "label": "a. I last filed taxes for tax year (specify year)"
-        },
-        "my_tax_filing_status_is": {
-          "type": "string",
-          "enum": [
-            "single",
-            "married, filing jointly with",
-            "head of household",
-            "married, filing separately",
-            "other (specify state)"
+  "displayType": "Form",
+  "properties":
+  {
+      "employment":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "employer":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Employer Name",
+                  "label": "Employer"
+              },
+              "employers_address":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Employer Address",
+                  "label": "Employer's address"
+              },
+              "employers_phone_number":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "format": "phone",
+                  "description": "Employer Phone Number",
+                  "label": "Employer's phone number"
+              },
+              "occupation":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Occupation",
+                  "label": "Occupation"
+              },
+              "date_job_started":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "format": "date",
+                  "description": "Job Start Date",
+                  "label": "Date job started"
+              },
+              "if_unemployed_date_job_ended":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "format": "date",
+                  "description": "Job End Date (if unemployed)",
+                  "label": "If unemployed, date job ended"
+              },
+              "i_work_about_hours_per_week":
+              {
+                  "type": "number",
+                  "description": "Hours Worked per Week",
+                  "displayType": "Input",
+                  "label": "I work about hours per week"
+              },
+              "i_get_paid__gross_before_taxes_per_month":
+              {
+                  "type": "number",
+                  "description": "Gross Monthly Pay",
+                  "displayType": "Input",
+                  "label": "I get paid $ gross (before taxes) per month"
+              },
+              "i_get_paid__gross_before_taxes_per_week":
+              {
+                  "type": "number",
+                  "description": "Gross Weekly Pay",
+                  "displayType": "Input",
+                  "label": "I get paid $ gross (before taxes) per week"
+              },
+              "i_get_paid__gross_before_taxes_per_hour":
+              {
+                  "type": "number",
+                  "description": "Gross Hourly Pay",
+                  "label": "I get paid $ gross (before taxes) per hour"
+              }
+          },
+          "required":
+          [
+              "employer",
+              "employers_address",
+              "employers_phone_number",
+              "occupation",
+              "date_job_started",
+              "i_work_about_hours_per_week"
           ],
-          "label": "b. My tax filing status is",
+          "label": "Employment",
+          "title": "Employment"
+      },
+      "age_and_education":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "my_age_is_specify":
+              {
+                  "type": "integer",
+                  "displayType": "Input",
+                  "description": "Age",
+                  "label": "My age is (specify)"
+              },
+              "i_have_completed_high_school_or_the_equivalent":
+              {
+                  "type": "boolean",
+                  "displayType": "Input",
+                  "description": "High School Completion",
+                  "label": "I have completed high school or the equivalent"
+              },
+              "number_of_years_of_college_completed_specify":
+              {
+                  "type": "integer",
+                  "displayType": "Input",
+                  "description": "Years of College Completed",
+                  "label": "Number of years of college completed (specify)"
+              },
+              "number_of_years_of_graduate_school_completed_specify":
+              {
+                  "type": "integer",
+                  "displayType": "Input",
+                  "description": "Years of Graduate School Completed",
+                  "label": "Number of years of graduate school completed (specify)"
+              },
+              "i_have_professionaloccupational_licenses_specify":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Professional Licenses",
+                  "label": "I have professional/occupational license(s) (specify)"
+              },
+              "i_have_vocational_training_specify":
+              {
+                  "type": "string",
+                  "description": "Vocational Training",
+                  "label": "I have vocational training (specify)"
+              }
+          },
+          "required":
+          [
+              "my_age_is_specify",
+              "i_have_completed_high_school_or_the_equivalent"
+          ],
+          "label": "Age and education"
+      },
+      "tax_information":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "i_last_filed_taxes_for_tax_year_specify_year":
+              {
+                  "type": "integer",
+                  "displayType": "Input",
+                  "description": "Tax Year",
+                  "label": "I last filed taxes for tax year (specify year)"
+              },
+              "my_tax_filing_status_is":
+              {
+                  "type": "string",
+                  "enum":
+                  [
+                      "single",
+                      "married, filing jointly with",
+                      "head of household",
+                      "married, filing separately",
+                      "other (specify state)"
+                  ],
+                  "label": "My tax filing status is",
+                  "displayType": "Input"
+              },
+              "i_file_state_tax_returns_in":
+              {
+                  "type": "string",
+                  "description": "State for Tax Filing",
+                  "label": "I file state tax returns in"
+              },
+              "i_claim_the_following_number_of_exemptions_including_myself_on_my_taxes_specify":
+              {
+                  "type": "integer",
+                  "displayType": "Input",
+                  "description": "Number of Exemptions",
+                  "label": "I claim the following number of exemptions (including myself) on my taxes (specify)"
+              }
+          },
+          "required":
+          [
+              "i_last_filed_taxes_for_tax_year_specify_year",
+              "my_tax_filing_status_is",
+              "i_file_state_tax_returns_in",
+              "i_claim_the_following_number_of_exemptions_including_myself_on_my_taxes_specify"
+          ],
+          "label": "Tax information"
+      },
+      "other_partys_income":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "i_estimate_the_gross_monthly_income_before_taxes_of_the_other_party_in_this_case_at_specify":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Other Party's Estimated Monthly Income",
+                  "label": "I estimate the gross monthly income (before taxes) of the other party in this case at (specify)"
+              },
+              "this_estimate_is_based_on_explain":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Explanation for Income Estimate",
+                  "label": "This estimate is based on (explain)"
+              }
+          },
+          "required":
+          [
+              "i_estimate_the_gross_monthly_income_before_taxes_of_the_other_party_in_this_case_at_specify",
+              "this_estimate_is_based_on_explain"
+          ],
+          "label": "Other party's income"
+      },
+      "income":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "salary_or_wages_gross_before_taxes":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Gross Salary/Wages",
+                  "label": "Salary or wages (gross, before taxes)"
+              },
+              "overtime_gross_before_taxes":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Gross Overtime",
+                  "label": "Overtime (gross, before taxes)"
+              },
+              "commissions_or_bonuses":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Commissions/Bonuses",
+                  "label": "Commissions or bonuses"
+              },
+              "public_assistance_for_example_tanf_ssi_gagr":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Public Assistance",
+                  "label": "Public assistance (for example: TANF, SSI, GA/GR)"
+              },
+              "spousal_support":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Spousal Support",
+                  "label": "Spousal support"
+              },
+              "partner_support":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Partner Support",
+                  "label": "Partner support"
+              },
+              "pensionretirement_fund_payments":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Pension/Retirement Payments",
+                  "label": "Pension/retirement fund payments"
+              },
+              "social_security_retirement_not_ssi":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Social Security Retirement",
+                  "label": "Social Security retirement (not SSI)"
+              },
+              "disability":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Disability Income",
+                  "label": "Disability"
+              },
+              "unemployment_compensation":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Unemployment Compensation",
+                  "label": "Unemployment compensation"
+              },
+              "workers_compensation":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Workers' Compensation",
+                  "label": "Workers' compensation"
+              },
+              "other_military_allowances_royalty_payments":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Other Income",
+                  "label": "Other (military allowances, royalty payments)"
+              }
+          },
+          "label": "Income"
+      },
+      "investment_income":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "dividendsinterest":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Dividends/Interest",
+                  "label": "Dividends/interest"
+              },
+              "rental_property_income":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Rental Income",
+                  "label": "Rental property income"
+              },
+              "trust_income":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Trust Income",
+                  "label": "Trust income"
+              },
+              "other_specify":
+              {
+                  "type": "number",
+                  "description": "Other Investment Income",
+                  "label": "Other (specify)"
+              }
+          },
+          "label": "Investment income"
+      },
+      "income_from_selfemployment":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "i_am_the":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "enum":
+                  [
+                      "owner/sole proprietor",
+                      "business partner",
+                      "other (specify)"
+                  ],
+                  "label": "I am the"
+              },
+              "number_of_years_in_this_business_specify":
+              {
+                  "type": "integer",
+                  "description": "Years in Business",
+                  "label": "Number of years in this business (specify)"
+              },
+              "name_of_business_specify":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Business Name",
+                  "label": "Name of business (specify)"
+              },
+              "type_of_business_specify":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Business Type",
+                  "label": "Type of business (specify)"
+              }
+          },
+          "label": "Income from self-employment"
+      },
+      "additional_income":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "i_received_onetime_money_lottery_winnings_inheritance_etc_in_the_last_12_months_specify_source_and_amount":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "One-Time Income",
+                  "label": "I received one-time money (lottery winnings, inheritance, etc.) in the last 12 months (specify source and amount)"
+              }
+          },
+          "label": "Additional income"
+      },
+      "change_in_income":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "my_financial_situation_has_changed_significantly_over_the_last_12_months_because_specify":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Explanation for Change in Income",
+                  "label": "My financial situation has changed significantly over the last 12 months because (specify)"
+              }
+          },
+          "label": "Change in income"
+      },
+      "deductions":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "required_union_dues":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Union Dues",
+                  "label": "Required union dues"
+              },
+              "required_retirement_payments_not_social_security_fica_401k_or_ira":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Retirement Payments",
+                  "label": "Required retirement payments (not Social Security, FICA, 401(k), or IRA)"
+              },
+              "medical_hospital_dental_and_other_health_insurance_premiums_total_monthly_amount":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Health Insurance Premiums",
+                  "label": "Medical, hospital, dental, and other health insurance premiums (total monthly amount)"
+              },
+              "child_support_that_i_pay_for_children_from_other_relationships":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Child Support Payments",
+                  "label": "Child support that I pay for children from other relationships"
+              },
+              "spousal_support_that_i_pay_by_court_order_from_a_different_marriage":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Spousal Support Payments",
+                  "label": "Spousal support that I pay by court order from a different marriage"
+              },
+              "partner_support_that_i_pay_by_court_order_from_a_different_domestic_partnership":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Partner Support Payments",
+                  "label": "Partner support that I pay by court order from a different domestic partnership"
+              },
+              "necessary_jobrelated_expenses_not_reimbursed_by_my_employer_attach_explanation_labeled_question_10g":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Job-Related Expenses",
+                  "label": "Necessary job-related expenses not reimbursed by my employer (attach explanation labeled \"Question 10g\")"
+              }
+          },
+          "label": "Deductions"
+      },
+      "assets":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "cash_and_checking_accounts_savings_credit_union_money_market_and_other_deposit_accounts":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Cash and Bank Accounts",
+                  "label": "Cash and checking accounts, savings, credit union, money market, and other deposit accounts"
+              },
+              "stocks_bonds_and_other_assets_i_could_easily_sell":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Stocks and Bonds",
+                  "label": "Stocks, bonds, and other assets I could easily sell"
+              },
+              "all_other_property_real_and_personal_estimate_fair_market_value_minus_the_debts_you_owe":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Other Assets",
+                  "label": "All other property, real and personal (estimate fair market value minus the debts you owe)"
+              }
+          },
+          "label": "Assets"
+      },
+      "the_following_people_live_with_me":
+      {
+          "type": "array",
+          "items":
+          {
+              "type": "object",
+              "properties":
+              {
+                  "name":
+                  {
+                      "type": "string",
+                      "displayType": "Input",
+                      "description": "Name of Person",
+                      "label": "Name"
+                  },
+                  "age":
+                  {
+                      "type": "integer",
+                      "displayType": "Input",
+                      "description": "Age",
+                      "label": "Age"
+                  },
+                  "how_the_person_is_related_to_me_ex_son":
+                  {
+                      "type": "string",
+                      "displayType": "Input",
+                      "description": "Relationship",
+                      "label": "How the person is related to me (ex: son)"
+                  },
+                  "that_persons_gross_monthly_income":
+                  {
+                      "type": "number",
+                      "displayType": "Input",
+                      "description": "Monthly Income",
+                      "label": "That person's gross monthly income"
+                  },
+                  "pays_some_of_the_household_expenses":
+                  {
+                      "type": "boolean",
+                      "description": "Pays Household Expenses",
+                      "label": "Pays some of the household expenses?"
+                  }
+              },
+              "required":
+              [
+                  "name",
+                  "age",
+                  "how_the_person_is_related_to_me_ex_son",
+                  "that_persons_gross_monthly_income",
+                  "pays_some_of_the_household_expenses"
+              ]
+          },
+          "label": "Household",
+          "description": "The following people live with me",
           "displayType": "Input"
-        },
-        "i_file_state_tax_returns_in": {
-          "type": "string",
-          "description": "State for Tax Filing",
-          "label": "c. I file state tax returns in"
-        },
-        "i_claim_the_following_number_of_exemptions_including_myself_on_my_taxes_specify": {
-          "type": "integer",
-          "displayType": "Input",
-          "description": "Number of Exemptions",
-          "label": "d. I claim the following number of exemptions (including myself) on my taxes (specify)"
-        }
       },
-      "required": [
-        "i_last_filed_taxes_for_tax_year_specify_year",
-        "my_tax_filing_status_is",
-        "i_file_state_tax_returns_in",
-        "i_claim_the_following_number_of_exemptions_including_myself_on_my_taxes_specify"
-      ],
-      "label": "3. Tax information"
-    },
-    "other_partys_income": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "i_estimate_the_gross_monthly_income_before_taxes_of_the_other_party_in_this_case_at_specify": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Other Party's Estimated Monthly Income",
-          "label": "I estimate the gross monthly income (before taxes) of the other party in this case at (specify)"
-        },
-        "this_estimate_is_based_on_explain": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Explanation for Income Estimate",
-          "label": "This estimate is based on (explain)"
-        }
-      },
-      "required": [
-        "i_estimate_the_gross_monthly_income_before_taxes_of_the_other_party_in_this_case_at_specify",
-        "this_estimate_is_based_on_explain"
-      ],
-      "label": "4. Other party's income"
-    },
-    "income": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "salary_or_wages_gross_before_taxes": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Gross Salary/Wages",
-          "label": "a. Salary or wages (gross, before taxes)"
-        },
-        "overtime_gross_before_taxes": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Gross Overtime",
-          "label": "b. Overtime (gross, before taxes)"
-        },
-        "commissions_or_bonuses": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Commissions/Bonuses",
-          "label": "c. Commissions or bonuses"
-        },
-        "public_assistance_for_example_tanf_ssi_gagr": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Public Assistance",
-          "label": "d. Public assistance (for example: TANF, SSI, GA/GR)"
-        },
-        "spousal_support": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Spousal Support",
-          "label": "e. Spousal support"
-        },
-        "partner_support": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Partner Support",
-          "label": "f. Partner support"
-        },
-        "pensionretirement_fund_payments": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Pension/Retirement Payments",
-          "label": "g. Pension/retirement fund payments"
-        },
-        "social_security_retirement_not_ssi": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Social Security Retirement",
-          "label": "h. Social Security retirement (not SSI)"
-        },
-        "disability": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Disability Income",
-          "label": "i. Disability"
-        },
-        "unemployment_compensation": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Unemployment Compensation",
-          "label": "j. Unemployment compensation"
-        },
-        "workers_compensation": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Workers' Compensation",
-          "label": "k. Workers' compensation"
-        },
-        "other_military_allowances_royalty_payments": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Other Income",
-          "label": "l. Other (military allowances, royalty payments)"
-        }
-      },
-      "label": "5. Income"
-    },
-    "investment_income": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "dividendsinterest": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Dividends/Interest",
-          "label": "a. Dividends/interest"
-        },
-        "rental_property_income": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Rental Income",
-          "label": "b. Rental property income"
-        },
-        "trust_income": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Trust Income",
-          "label": "c. Trust income"
-        },
-        "other_specify": {
-          "type": "number",
-          "description": "Other Investment Income",
-          "label": "d. Other (specify)"
-        }
-      },
-      "label": "6. Investment income"
-    },
-    "income_from_selfemployment": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "i_am_the": {
-          "type": "string",
-          "displayType": "Input",
-          "enum": [
-            "owner/sole proprietor",
-            "business partner",
-            "other (specify)"
-          ],
-          "label": "I am the"
-          
-        },
-        "number_of_years_in_this_business_specify": {
-          "type": "integer",
-          "description": "Years in Business",
-          "label": "Number of years in this business (specify)"
-        },
-        "name_of_business_specify": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Business Name",
-          "label": "Name of business (specify)"
-        },
-        "type_of_business_specify": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Business Type",
-          "label": "Type of business (specify)"
-        }
-      },
-      "label": "7. Income from self-employment"
-    },
-    "additional_income": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "i_received_onetime_money_lottery_winnings_inheritance_etc_in_the_last_12_months_specify_source_and_amount": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "One-Time Income",
-          "label": "I received one-time money (lottery winnings, inheritance, etc.) in the last 12 months (specify source and amount)"
-        }
-      },
-      "label": "8. Additional income"
-    },
-    "change_in_income": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "my_financial_situation_has_changed_significantly_over_the_last_12_months_because_specify": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Explanation for Change in Income",
-          "label": "My financial situation has changed significantly over the last 12 months because (specify)"
-        }
-      },
-      "label": "9. Change in income"
-    },
-    "deductions": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "required_union_dues": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Union Dues",
-          "label": "a. Required union dues"
-        },
-        "required_retirement_payments_not_social_security_fica_401k_or_ira": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Retirement Payments",
-          "label": "b. Required retirement payments (not Social Security, FICA, 401(k), or IRA)"
-        },
-        "medical_hospital_dental_and_other_health_insurance_premiums_total_monthly_amount": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Health Insurance Premiums",
-          "label": "c. Medical, hospital, dental, and other health insurance premiums (total monthly amount)"
-        },
-        "child_support_that_i_pay_for_children_from_other_relationships": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Child Support Payments",
-          "label": "d. Child support that I pay for children from other relationships"
-        },
-        "spousal_support_that_i_pay_by_court_order_from_a_different_marriage": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Spousal Support Payments",
-          "label": "e. Spousal support that I pay by court order from a different marriage"
-        },
-        "partner_support_that_i_pay_by_court_order_from_a_different_domestic_partnership": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Partner Support Payments",
-          "label": "f. Partner support that I pay by court order from a different domestic partnership"
-        },
-        "necessary_jobrelated_expenses_not_reimbursed_by_my_employer_attach_explanation_labeled_question_10g": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Job-Related Expenses",
-          "label": "g. Necessary job-related expenses not reimbursed by my employer (attach explanation labeled \"Question 10g\")"
-        }
-      },
-      "label": "10. Deductions"
-    },
-    "assets": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "cash_and_checking_accounts_savings_credit_union_money_market_and_other_deposit_accounts": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Cash and Bank Accounts",
-          "label": "a. Cash and checking accounts, savings, credit union, money market, and other deposit accounts"
-        },
-        "stocks_bonds_and_other_assets_i_could_easily_sell": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Stocks and Bonds",
-          "label": "b. Stocks, bonds, and other assets I could easily sell"
-        },
-        "all_other_property_real_and_personal_estimate_fair_market_value_minus_the_debts_you_owe": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Other Assets",
-          "label": "c. All other property, real and personal (estimate fair market value minus the debts you owe)"
-        }
-      },
-      "label": "11. Assets"
-    },
-    "the_following_people_live_with_me": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "displayType": "Input",
-            "description": "Name of Person",
-            "label": "Name"
+      "average_monthly_expenses":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "home":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Home Expenses",
+                  "label": "Home"
+              },
+              "healthcare_costs_not_paid_by_insurance":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Health Care Costs",
+                  "label": "Health-care costs not paid by insurance"
+              },
+              "child_care":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Child Care Costs",
+                  "label": "Child care"
+              },
+              "groceries_and_household_supplies":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Groceries and Supplies",
+                  "label": "Groceries and household supplies"
+              },
+              "eating_out":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Eating Out Costs",
+                  "label": "Eating out"
+              },
+              "utilities_gas_electric_water_trash":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Utility Costs",
+                  "label": "Utilities (gas, electric, water, trash)"
+              },
+              "telephone_cell_phone_and_email":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Communication Costs",
+                  "label": "Telephone, cell phone, and e-mail"
+              },
+              "laundry_and_cleaning":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Laundry and Cleaning Costs",
+                  "label": "Laundry and cleaning"
+              },
+              "clothes":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Clothing Costs",
+                  "label": "Clothes"
+              },
+              "education":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Education Costs",
+                  "label": "Education"
+              },
+              "entertainment_gifts_and_vacation":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Entertainment Costs",
+                  "label": "Entertainment, gifts, and vacation"
+              },
+              "auto_expenses_and_transportation":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Transportation Costs",
+                  "label": "Auto expenses and transportation"
+              },
+              "insurance_life_accident_etc_do_not_include_auto_home_or_health_insurance":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Insurance Costs",
+                  "label": "Insurance (life, accident, etc.; do not include auto, home, or health insurance)"
+              },
+              "savings_and_investments":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Savings and Investments",
+                  "label": "Savings and investments"
+              },
+              "charitable_contributions":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Charitable Contributions",
+                  "label": "Charitable contributions"
+              },
+              "monthly_payments_listed_in_item_14":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Monthly Payments",
+                  "label": "Monthly payments listed in item 14"
+              },
+              "other_specify":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Other Expenses",
+                  "label": "Other (specify)"
+              },
+              "total_expenses_aq":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Total Expenses",
+                  "label": "TOTAL EXPENSES (a-q)"
+              },
+              "amount_of_expenses_paid_by_others":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Expenses Paid by Others",
+                  "label": "Amount of expenses paid by others"
+              }
           },
-          "age": {
-            "type": "integer",
-            "displayType": "Input",
-            "description": "Age",
-            "label": "Age"
+          "label": "Average monthly expenses"
+      },
+      "installment_payments_and_debts_not_listed_above":
+      {
+          "type": "array",
+          "items":
+          {
+              "type": "object",
+              "properties":
+              {
+                  "paid_to":
+                  {
+                      "type": "string",
+                      "displayType": "Input",
+                      "description": "Creditor",
+                      "label": "Paid to"
+                  },
+                  "for":
+                  {
+                      "type": "string",
+                      "displayType": "Input",
+                      "description": "Debt Description",
+                      "label": "For"
+                  },
+                  "amount":
+                  {
+                      "type": "number",
+                      "displayType": "Input",
+                      "description": "Amount Owed",
+                      "label": "Amount"
+                  },
+                  "balance":
+                  {
+                      "type": "number",
+                      "displayType": "Input",
+                      "description": "Remaining Balance",
+                      "label": "Balance"
+                  },
+                  "date_of_last_payment":
+                  {
+                      "type": "string",
+                      "format": "date",
+                      "displayType": "Input",
+                      "description": "Last Payment Date",
+                      "label": "Date of last payment"
+                  }
+              }
           },
-          "how_the_person_is_related_to_me_ex_son": {
-            "type": "string",
-            "displayType": "Input",
-            "description": "Relationship",
-            "label": "How the person is related to me (ex: son)"
+          "label": "Installment Payments",
+          "description": "Installment payments and debts not listed above"
+      },
+      "attorney_fees":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "to_date_i_have_paid_my_attorney_this_amount_for_fees_and_costs_specify":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Attorney Fees Paid",
+                  "label": "To date, I have paid my attorney this amount for fees and costs (specify)"
+              },
+              "the_source_of_this_money_was_specify":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Source of Attorney Fees",
+                  "label": "The source of this money was (specify)"
+              },
+              "i_still_owe_the_following_fees_and_costs_to_my_attorney_specify_total_owed":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Attorney Fees Owed",
+                  "label": "I still owe the following fees and costs to my attorney (specify total owed)"
+              },
+              "my_attorneys_hourly_rate_is_specify":
+              {
+                  "type": "number",
+                  "description": "Attorney Hourly Rate",
+                  "label": "My attorney's hourly rate is (specify)"
+              }
           },
-          "that_persons_gross_monthly_income": {
-            "type": "number",
-            "displayType": "Input",
-            "description": "Monthly Income",
-            "label": "That person's gross monthly income"
+          "label": "Attorney fees"
+      },
+      "number_of_children":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "i_have_specify_number":
+              {
+                  "type": "integer",
+                  "displayType": "Input",
+                  "description": "Number of Children",
+                  "label": "I have (specify number)"
+              },
+              "the_children_spend_percent_of_their_time_with_me_and_percent_of_their_time_with_the_other_parent":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Child Custody Arrangement",
+                  "label": "The children spend percent of their time with me and percent of their time with the other parent"
+              }
           },
-          "pays_some_of_the_household_expenses": {
-            "type": "boolean",
-            "description": "Pays Household Expenses",
-            "label": "Pays some of the household expenses?"
+          "label": "Number of children"
+      },
+      "childrens_healthcare_expenses":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "i_do_have_health_insurance_available_to_me_for_the_children_through_my_job":
+              {
+                  "type": "boolean",
+                  "displayType": "Input",
+                  "description": "Health Insurance Availability",
+                  "label": "I do have health insurance available to me for the children through my job."
+              },
+              "name_of_insurance_company":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Insurance Company Name",
+                  "label": "Name of insurance company"
+              },
+              "address_of_insurance_company":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Insurance Company Address",
+                  "label": "Address of insurance company"
+              },
+              "the_monthly_cost_for_the_childrens_health_insurance_is_or_would_be_specify":
+              {
+                  "type": "number",
+                  "description": "Monthly Health Insurance Cost",
+                  "label": "The monthly cost for the children's health insurance is or would be (specify)"
+              }
+          },
+          "label": "Children's health-care expenses"
+      },
+      "additional_expense_for_the_children_in_this_case":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "childcare_so_i_can_work_or_get_job_training":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Childcare Costs",
+                  "label": "Childcare so I can work or get job training"
+              },
+              "childrens_health_care_not_covered_by_insurance":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Uninsured Health Care Costs",
+                  "label": "Children's health care not covered by insurance"
+              },
+              "travel_expenses_for_visitation":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Visitation Travel Costs",
+                  "label": "Travel expenses for visitation"
+              },
+              "childrens_educational_or_other_special_needs_specify_below":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Educational/Special Needs Costs",
+                  "label": "Children's educational or other special needs (specify below)"
+              }
+          },
+          "label": "Additional children's expenses",
+          "description": "Additional expense for the children in this case"
+      },
+      "special_hardships":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "properties":
+          {
+              "extraordinary_health_expenses_not_included_in_18b":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Extraordinary Health Expenses",
+                  "label": "Extraordinary health expenses not included in 18b"
+              },
+              "major_losses_not_covered_by_insurance_examples_fire_theft_other_insured_loss":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Uninsured Major Losses",
+                  "label": "Major losses not covered by insurance (examples: fire, theft, other insured loss)"
+              },
+              "1_expenses_for_my_minor_children_who_are_from_other_relationships_and_are_living_with_me":
+              {
+                  "type": "number",
+                  "displayType": "Input",
+                  "description": "Expenses for Other Children",
+                  "label": "(1) Expenses for my minor children who are from other relationships and are living with me"
+              },
+              "2_names_and_ages_of_those_children_specify":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Other Children's Information",
+                  "label": "(2) Names and ages of those children (specify)"
+              },
+              "3_child_support_i_receive_for_those_children":
+              {
+                  "type": "number",
+                  "description": "Child Support Received",
+                  "label": "(3) Child support I receive for those children"
+              }
+          },
+          "label": "Special hardships"
+      },
+      "other_information_i_want_the_court_to_know_concerning_support_in_my_case_specify":
+      {
+          "type": "object",
+          "displayType": "Section",
+          "description": "Other information I want the court to know concerning support in my case (specify)",
+          "label": "Other information",
+          "properties":
+          {
+              "other":
+              {
+                  "type": "string",
+                  "displayType": "Input",
+                  "description": "Other information",
+                  "label": ""
+              }
           }
-        },
-        "required": [
-          "name",
-          "age",
-          "how_the_person_is_related_to_me_ex_son",
-          "that_persons_gross_monthly_income",
-          "pays_some_of_the_household_expenses"
-        ]
-      },
-      "label": "12. The following people live with me",
-      "displayType":"Input"
-    },
-    "average_monthly_expenses": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "home": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Home Expenses",
-          "label": "a. Home"
-        },
-        "healthcare_costs_not_paid_by_insurance": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Health Care Costs",
-          "label": "b. Health-care costs not paid by insurance"
-        },
-        "child_care": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Child Care Costs",
-          "label": "c. Child care"
-        },
-        "groceries_and_household_supplies": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Groceries and Supplies",
-          "label": "d. Groceries and household supplies"
-        },
-        "eating_out": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Eating Out Costs",
-          "label": "e. Eating out"
-        },
-        "utilities_gas_electric_water_trash": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Utility Costs",
-          "label": "f. Utilities (gas, electric, water, trash)"
-        },
-        "telephone_cell_phone_and_email": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Communication Costs",
-          "label": "g. Telephone, cell phone, and e-mail"
-        },
-        "laundry_and_cleaning": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Laundry and Cleaning Costs",
-          "label": "h. Laundry and cleaning"
-        },
-        "clothes": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Clothing Costs",
-          "label": "i. Clothes"
-        },
-        "education": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Education Costs",
-          "label": "j. Education"
-        },
-        "entertainment_gifts_and_vacation": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Entertainment Costs",
-          "label": "k. Entertainment, gifts, and vacation"
-        },
-        "auto_expenses_and_transportation": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Transportation Costs",
-          "label": "l. Auto expenses and transportation"
-        },
-        "insurance_life_accident_etc_do_not_include_auto_home_or_health_insurance": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Insurance Costs",
-          "label": "m. Insurance (life, accident, etc.; do not include auto, home, or health insurance)"
-        },
-        "savings_and_investments": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Savings and Investments",
-          "label": "n. Savings and investments"
-        },
-        "charitable_contributions": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Charitable Contributions",
-          "label": "o. Charitable contributions"
-        },
-        "monthly_payments_listed_in_item_14": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Monthly Payments",
-          "label": "p. Monthly payments listed in item 14"
-        },
-        "other_specify": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Other Expenses",
-          "label": "q. Other (specify)"
-        },
-        "total_expenses_aq": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Total Expenses",
-          "label": "r. TOTAL EXPENSES (a-q)"
-        },
-        "amount_of_expenses_paid_by_others": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Expenses Paid by Others",
-          "label": "s. Amount of expenses paid by others"
-        }
-      },
-      "label": "13. Average monthly expenses"
-    },
-    
-    "installment_payments_and_debts_not_listed_above": {
-      "type": "array",
-      "items": {
-        "type": "object", 
-        "properties": {
-          "paid_to": {
-            "type": "string",
-            "displayType": "Input",
-            "description": "Creditor",
-            "label": "Paid to"
-          },
-          "for": {
-            "type": "string",
-            "displayType": "Input",
-            "description": "Debt Description",
-            "label": "For"
-          },
-          "amount": {
-            "type": "number",
-            "displayType": "Input",
-            "description": "Amount Owed",
-            "label": "Amount"
-          },
-          "balance": {
-            "type": "number",
-            "displayType": "Input",
-            "description": "Remaining Balance",
-            "label": "Balance"
-          },
-          "date_of_last_payment": {
-            "type": "string",
-            "format": "date",
-            "displayType": "Input",
-            "description": "Last Payment Date",
-            "label": "Date of last payment"
-          }
-        }
-      },
-      "label": "14. Installment payments and debts not listed above"
-    },
-    "attorney_fees": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "to_date_i_have_paid_my_attorney_this_amount_for_fees_and_costs_specify": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Attorney Fees Paid",
-          "label": "a. To date, I have paid my attorney this amount for fees and costs (specify)"
-        },
-        "the_source_of_this_money_was_specify": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Source of Attorney Fees",
-          "label": "b. The source of this money was (specify)"
-        },
-        "i_still_owe_the_following_fees_and_costs_to_my_attorney_specify_total_owed": {
-          "type": "number",
-          "displayType": "Input",
-
-          "description": "Attorney Fees Owed",
-          "label": "c. I still owe the following fees and costs to my attorney (specify total owed)"
-        },
-        "my_attorneys_hourly_rate_is_specify": {
-          "type": "number",
-          "description": "Attorney Hourly Rate",
-          "label": "d. My attorney's hourly rate is (specify)"
-        }
-      },
-      "label": "15. Attorney fees"
-    },
-    "number_of_children": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "i_have_specify_number": {
-          "type": "integer",
-          "displayType": "Input",
-          "description": "Number of Children",
-          "label": "a. I have (specify number)"
-        },
-        "the_children_spend_percent_of_their_time_with_me_and_percent_of_their_time_with_the_other_parent": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Child Custody Arrangement",
-          "label": "b. The children spend percent of their time with me and percent of their time with the other parent"
-        }
-      },
-      "label": "16. Number of children"
-    },
-    "childrens_healthcare_expenses": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "i_do_have_health_insurance_available_to_me_for_the_children_through_my_job": {
-          "type": "boolean",
-          "displayType": "Input",
-          "description": "Health Insurance Availability",
-          "label": "a. I do have health insurance available to me for the children through my job."
-        },
-        "name_of_insurance_company": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Insurance Company Name",
-          "label": "b. Name of insurance company"
-        },
-        "address_of_insurance_company": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Insurance Company Address",
-          "label": "c. Address of insurance company"
-        },
-        "the_monthly_cost_for_the_childrens_health_insurance_is_or_would_be_specify": {
-          "type": "number",
-          "description": "Monthly Health Insurance Cost",
-          "label": "d. The monthly cost for the children's health insurance is or would be (specify)"
-        }
-      },
-      "label": "17. Children's health-care expenses"
-    },
-    "additional_expense_for_the_children_in_this_case": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "childcare_so_i_can_work_or_get_job_training": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Childcare Costs",
-          "label": "a. Childcare so I can work or get job training"
-        },
-        "childrens_health_care_not_covered_by_insurance": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Uninsured Health Care Costs",
-          "label": "b. Children's health care not covered by insurance"
-        },
-        "travel_expenses_for_visitation": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Visitation Travel Costs",
-          "label": "c. Travel expenses for visitation"
-        },
-        "childrens_educational_or_other_special_needs_specify_below": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Educational/Special Needs Costs",
-          "label": "d. Children's educational or other special needs (specify below)"
-        }
-      },
-      "label": "18. Additional expense for the children in this case"
-    },
-    "special_hardships": {
-      "type": "object",
-      "displayType":"Section",
-      "properties": {
-        "extraordinary_health_expenses_not_included_in_18b": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Extraordinary Health Expenses",
-          "label": "a. Extraordinary health expenses not included in 18b"
-        },
-        "major_losses_not_covered_by_insurance_examples_fire_theft_other_insured_loss": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Uninsured Major Losses",
-          "label": "b. Major losses not covered by insurance (examples: fire, theft, other insured loss)"
-        },
-        "1_expenses_for_my_minor_children_who_are_from_other_relationships_and_are_living_with_me": {
-          "type": "number",
-          "displayType": "Input",
-          "description": "Expenses for Other Children",
-          "label": "c. (1) Expenses for my minor children who are from other relationships and are living with me"
-        },
-        "2_names_and_ages_of_those_children_specify": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Other Children's Information",
-          "label": "c. (2) Names and ages of those children (specify)"
-        },
-        "3_child_support_i_receive_for_those_children": {
-          "type": "number",
-          "description": "Child Support Received",
-          "label": "c. (3) Child support I receive for those children"
-        }
-      },
-      "label": "19. Special hardships"
-    },
-    "other_information_i_want_the_court_to_know_concerning_support_in_my_case_specify": {
-      "type": "object",
-      "displayType":"Section",
-      "description": "Other Relevant Information",
-      "label": "20. Other information I want the court to know concerning support in my case (specify)",
-      "properties": {
-        "other": {
-          "type": "string",
-          "displayType": "Input",
-          "description": "Other information",
-          "label": ""
-        }
       }
-    }
   }
 }
