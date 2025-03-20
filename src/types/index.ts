@@ -1,5 +1,3 @@
-import { List } from "postcss/lib/list";
-
 export interface InputSchema {
   type: string;
   description?: string;
