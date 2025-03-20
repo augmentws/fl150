@@ -2,7 +2,7 @@
 import React from 'react';
 import InputField from './InputField';
 import ArrayInputField from './ArrayInputField';
-import { InputSchema, Properties, Section } from '../types';
+import { InputSchema, Section } from '../types';
 
 interface FormData {
   [key: string]: any;
