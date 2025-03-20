@@ -22,7 +22,7 @@ const InputField: React.FC<InputFieldProps> = ({ fieldName, schema, value, onCha
   return (
     <div key={fieldName} className='form-input-container grid grid-cols-1 md:grid-cols-4 gap-2 items-start w-full'>
       <label 
-    className="md:col-span-3 break-words"
+    className="text-sm md:col-span-3 break-words"
     htmlFor={fieldName}>{label}:</label>
       <input
     className="md:col-span-1 bg-gray-100 dark:bg-gray-400 border border-gray-300 rounded-md p-1 w-full"

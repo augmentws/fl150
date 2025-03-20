@@ -21,6 +21,20 @@ html[data-theme='dark'] {
 html.light body header{
   background-color: white;
 }
+html.light .input-table table thead{
+  background-color: black;
+  color:white;
+}
+html.light .input-table table thead tr td{
+  border:1px solid white;
+  color:darkred;
+}
+html.light .input-table table tbody tr td{
+  border-color: white;
+}
+html.light .input-table table{
+  border-color: black;
+}
 .form-input-container {
   display: flex;
   align-items: center;
