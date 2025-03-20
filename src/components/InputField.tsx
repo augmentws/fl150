@@ -25,7 +25,7 @@ const InputField: React.FC<InputFieldProps> = ({ fieldName, schema, value, onCha
     className="md:col-span-3 break-words"
     htmlFor={fieldName}>{label}:</label>
       <input
-    className="md:col-span-1 bg-gray-100 border border-gray-300 rounded-md p-1 w-full"
+    className="md:col-span-1 bg-gray-100 dark:bg-gray-400 border border-gray-300 rounded-md p-1 w-full"
     type={schema.type === 'number' ? 'number' : 'text'}
         id={fieldName}
         value={value}
