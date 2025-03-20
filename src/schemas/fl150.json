@@ -16,6 +16,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Employer Name",
                   "label": "Employer"
               },
@@ -23,6 +24,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Employer Address",
                   "label": "Employer's address"
               },
@@ -30,6 +32,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "phone",
                   "format": "phone",
                   "description": "Employer Phone Number",
                   "label": "Employer's phone number"
@@ -38,6 +41,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Occupation",
                   "label": "Occupation"
               },
@@ -45,6 +49,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "date",
                   "format": "date",
                   "description": "Job Start Date",
                   "label": "Date job started"
@@ -53,6 +58,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "date",
                   "format": "date",
                   "description": "Job End Date (if unemployed)",
                   "label": "If unemployed, date job ended"
@@ -62,6 +68,7 @@
                   "type": "number",
                   "description": "Hours Worked per Week",
                   "displayType": "Input",
+                  "inputType": "number",
                   "label": "I work about hours per week"
               },
               "i_get_paid__gross_before_taxes_per_month":
@@ -69,6 +76,7 @@
                   "type": "number",
                   "description": "Gross Monthly Pay",
                   "displayType": "Input",
+                  "inputType": "number",
                   "label": "I get paid $ gross (before taxes) per month"
               },
               "i_get_paid__gross_before_taxes_per_week":
@@ -76,11 +84,14 @@
                   "type": "number",
                   "description": "Gross Weekly Pay",
                   "displayType": "Input",
+                  "inputType": "number",
                   "label": "I get paid $ gross (before taxes) per week"
               },
               "i_get_paid__gross_before_taxes_per_hour":
               {
                   "type": "number",
+                  "displayType": "Input",
+                  "inputType": "number",
                   "description": "Gross Hourly Pay",
                   "label": "I get paid $ gross (before taxes) per hour"
               }
@@ -105,8 +116,9 @@
           {
               "my_age_is_specify":
               {
-                  "type": "integer",
+                  "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Age",
                   "label": "My age is (specify)"
               },
@@ -114,20 +126,23 @@
               {
                   "type": "boolean",
                   "displayType": "Input",
+                  "inputType": "checkbox",
                   "description": "High School Completion",
                   "label": "I have completed high school or the equivalent"
               },
               "number_of_years_of_college_completed_specify":
               {
-                  "type": "integer",
+                  "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Years of College Completed",
                   "label": "Number of years of college completed (specify)"
               },
               "number_of_years_of_graduate_school_completed_specify":
               {
-                  "type": "integer",
+                  "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Years of Graduate School Completed",
                   "label": "Number of years of graduate school completed (specify)"
               },
@@ -135,6 +150,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Professional Licenses",
                   "label": "I have professional/occupational license(s) (specify)"
               },
@@ -160,8 +176,9 @@
           {
               "i_last_filed_taxes_for_tax_year_specify_year":
               {
-                  "type": "integer",
+                  "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Tax Year",
                   "label": "I last filed taxes for tax year (specify year)"
               },
@@ -177,18 +194,22 @@
                       "other (specify state)"
                   ],
                   "label": "My tax filing status is",
-                  "displayType": "Input"
+                  "displayType": "Input",
+                  "inputType": "text"
               },
               "i_file_state_tax_returns_in":
               {
                   "type": "string",
+                  "displayType": "Input",
+                  "inputType": "text",
                   "description": "State for Tax Filing",
                   "label": "I file state tax returns in"
               },
               "i_claim_the_following_number_of_exemptions_including_myself_on_my_taxes_specify":
               {
-                  "type": "integer",
+                  "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Number of Exemptions",
                   "label": "I claim the following number of exemptions (including myself) on my taxes (specify)"
               }
@@ -212,6 +233,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Other Party's Estimated Monthly Income",
                   "label": "I estimate the gross monthly income (before taxes) of the other party in this case at (specify)"
               },
@@ -219,6 +241,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Explanation for Income Estimate",
                   "label": "This estimate is based on (explain)"
               }
@@ -240,6 +263,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Gross Salary/Wages",
                   "label": "Salary or wages (gross, before taxes)"
               },
@@ -247,6 +271,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Gross Overtime",
                   "label": "Overtime (gross, before taxes)"
               },
@@ -254,6 +279,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Commissions/Bonuses",
                   "label": "Commissions or bonuses"
               },
@@ -261,6 +287,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Public Assistance",
                   "label": "Public assistance (for example: TANF, SSI, GA/GR)"
               },
@@ -268,6 +295,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Spousal Support",
                   "label": "Spousal support"
               },
@@ -275,6 +303,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Partner Support",
                   "label": "Partner support"
               },
@@ -282,6 +311,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Pension/Retirement Payments",
                   "label": "Pension/retirement fund payments"
               },
@@ -289,6 +319,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Social Security Retirement",
                   "label": "Social Security retirement (not SSI)"
               },
@@ -296,6 +327,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Disability Income",
                   "label": "Disability"
               },
@@ -303,6 +335,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Unemployment Compensation",
                   "label": "Unemployment compensation"
               },
@@ -310,6 +343,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Workers' Compensation",
                   "label": "Workers' compensation"
               },
@@ -317,6 +351,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Other Income",
                   "label": "Other (military allowances, royalty payments)"
               }
@@ -333,6 +368,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Dividends/Interest",
                   "label": "Dividends/interest"
               },
@@ -340,6 +376,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Rental Income",
                   "label": "Rental property income"
               },
@@ -347,12 +384,15 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Trust Income",
                   "label": "Trust income"
               },
               "other_specify":
               {
                   "type": "number",
+                  "displayType": "Input",
+                  "inputType": "number",
                   "description": "Other Investment Income",
                   "label": "Other (specify)"
               }
@@ -369,6 +409,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "enum":
                   [
                       "owner/sole proprietor",
@@ -379,7 +420,9 @@
               },
               "number_of_years_in_this_business_specify":
               {
-                  "type": "integer",
+                  "type": "number",
+                  "displayType": "Input",
+                  "inputType": "number",
                   "description": "Years in Business",
                   "label": "Number of years in this business (specify)"
               },
@@ -387,6 +430,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Business Name",
                   "label": "Name of business (specify)"
               },
@@ -394,6 +438,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Business Type",
                   "label": "Type of business (specify)"
               }
@@ -410,6 +455,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "One-Time Income",
                   "label": "I received one-time money (lottery winnings, inheritance, etc.) in the last 12 months (specify source and amount)"
               }
@@ -426,6 +472,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Explanation for Change in Income",
                   "label": "My financial situation has changed significantly over the last 12 months because (specify)"
               }
@@ -442,6 +489,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Union Dues",
                   "label": "Required union dues"
               },
@@ -449,6 +497,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Retirement Payments",
                   "label": "Required retirement payments (not Social Security, FICA, 401(k), or IRA)"
               },
@@ -456,6 +505,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Health Insurance Premiums",
                   "label": "Medical, hospital, dental, and other health insurance premiums (total monthly amount)"
               },
@@ -463,6 +513,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Child Support Payments",
                   "label": "Child support that I pay for children from other relationships"
               },
@@ -470,6 +521,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Spousal Support Payments",
                   "label": "Spousal support that I pay by court order from a different marriage"
               },
@@ -477,6 +529,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Partner Support Payments",
                   "label": "Partner support that I pay by court order from a different domestic partnership"
               },
@@ -484,6 +537,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Job-Related Expenses",
                   "label": "Necessary job-related expenses not reimbursed by my employer (attach explanation labeled \"Question 10g\")"
               }
@@ -500,6 +554,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Cash and Bank Accounts",
                   "label": "Cash and checking accounts, savings, credit union, money market, and other deposit accounts"
               },
@@ -507,6 +562,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Stocks and Bonds",
                   "label": "Stocks, bonds, and other assets I could easily sell"
               },
@@ -514,6 +570,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Other Assets",
                   "label": "All other property, real and personal (estimate fair market value minus the debts you owe)"
               }
@@ -532,13 +589,15 @@
                   {
                       "type": "string",
                       "displayType": "Input",
+                  "inputType": "text",
                       "description": "Name of Person",
                       "label": "Name"
                   },
                   "age":
                   {
-                      "type": "integer",
+                      "type": "number",
                       "displayType": "Input",
+                  "inputType": "number",
                       "description": "Age",
                       "label": "Age"
                   },
@@ -546,6 +605,7 @@
                   {
                       "type": "string",
                       "displayType": "Input",
+                        "inputType": "text",
                       "description": "Relationship",
                       "label": "How the person is related to me (ex: son)"
                   },
@@ -553,12 +613,15 @@
                   {
                       "type": "number",
                       "displayType": "Input",
+                      "inputType": "number",
                       "description": "Monthly Income",
                       "label": "That person's gross monthly income"
                   },
                   "pays_some_of_the_household_expenses":
                   {
                       "type": "boolean",
+                      "displayType": "Input",
+                      "inputType":"checkbox",
                       "description": "Pays Household Expenses",
                       "label": "Pays some of the household expenses?"
                   }
@@ -586,6 +649,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Home Expenses",
                   "label": "Home"
               },
@@ -593,6 +657,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Health Care Costs",
                   "label": "Health-care costs not paid by insurance"
               },
@@ -600,6 +665,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Child Care Costs",
                   "label": "Child care"
               },
@@ -607,6 +673,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Groceries and Supplies",
                   "label": "Groceries and household supplies"
               },
@@ -614,6 +681,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Eating Out Costs",
                   "label": "Eating out"
               },
@@ -621,6 +689,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Utility Costs",
                   "label": "Utilities (gas, electric, water, trash)"
               },
@@ -628,6 +697,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Communication Costs",
                   "label": "Telephone, cell phone, and e-mail"
               },
@@ -635,6 +705,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Laundry and Cleaning Costs",
                   "label": "Laundry and cleaning"
               },
@@ -642,6 +713,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Clothing Costs",
                   "label": "Clothes"
               },
@@ -649,6 +721,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Education Costs",
                   "label": "Education"
               },
@@ -656,6 +729,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Entertainment Costs",
                   "label": "Entertainment, gifts, and vacation"
               },
@@ -663,6 +737,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Transportation Costs",
                   "label": "Auto expenses and transportation"
               },
@@ -670,6 +745,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Insurance Costs",
                   "label": "Insurance (life, accident, etc.; do not include auto, home, or health insurance)"
               },
@@ -677,6 +753,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Savings and Investments",
                   "label": "Savings and investments"
               },
@@ -684,6 +761,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Charitable Contributions",
                   "label": "Charitable contributions"
               },
@@ -691,6 +769,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Monthly Payments",
                   "label": "Monthly payments listed in item 14"
               },
@@ -698,6 +777,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Other Expenses",
                   "label": "Other (specify)"
               },
@@ -705,6 +785,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Total Expenses",
                   "label": "TOTAL EXPENSES (a-q)"
               },
@@ -712,6 +793,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Expenses Paid by Others",
                   "label": "Amount of expenses paid by others"
               }
@@ -730,6 +812,7 @@
                   {
                       "type": "string",
                       "displayType": "Input",
+                  "inputType": "text",
                       "description": "Creditor",
                       "label": "Paid to"
                   },
@@ -737,6 +820,7 @@
                   {
                       "type": "string",
                       "displayType": "Input",
+                  "inputType": "text",
                       "description": "Debt Description",
                       "label": "For"
                   },
@@ -744,6 +828,7 @@
                   {
                       "type": "number",
                       "displayType": "Input",
+                  "inputType": "number",
                       "description": "Amount Owed",
                       "label": "Amount"
                   },
@@ -751,6 +836,7 @@
                   {
                       "type": "number",
                       "displayType": "Input",
+                  "inputType": "number",
                       "description": "Remaining Balance",
                       "label": "Balance"
                   },
@@ -759,6 +845,7 @@
                       "type": "string",
                       "format": "date",
                       "displayType": "Input",
+                  "inputType": "date",
                       "description": "Last Payment Date",
                       "label": "Date of last payment"
                   }
@@ -777,6 +864,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Attorney Fees Paid",
                   "label": "To date, I have paid my attorney this amount for fees and costs (specify)"
               },
@@ -784,6 +872,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "date",
                   "description": "Source of Attorney Fees",
                   "label": "The source of this money was (specify)"
               },
@@ -791,6 +880,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Attorney Fees Owed",
                   "label": "I still owe the following fees and costs to my attorney (specify total owed)"
               },
@@ -811,8 +901,9 @@
           {
               "i_have_specify_number":
               {
-                  "type": "integer",
+                  "type": "number",
                   "displayType": "Input",
+                  "inputType": "number",
                   "description": "Number of Children",
                   "label": "I have (specify number)"
               },
@@ -820,6 +911,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Child Custody Arrangement",
                   "label": "The children spend percent of their time with me and percent of their time with the other parent"
               }
@@ -836,13 +928,15 @@
               {
                   "type": "boolean",
                   "displayType": "Input",
+                  "inputType": "checkbox",
                   "description": "Health Insurance Availability",
-                  "label": "I do have health insurance available to me for the children through my job."
+                  "label": "I do have health insurance available to me for the children through my job"
               },
               "name_of_insurance_company":
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Insurance Company Name",
                   "label": "Name of insurance company"
               },
@@ -850,6 +944,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "text",
                   "description": "Insurance Company Address",
                   "label": "Address of insurance company"
               },
@@ -872,6 +967,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Childcare Costs",
                   "label": "Childcare so I can work or get job training"
               },
@@ -879,6 +975,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Uninsured Health Care Costs",
                   "label": "Children's health care not covered by insurance"
               },
@@ -886,6 +983,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Visitation Travel Costs",
                   "label": "Travel expenses for visitation"
               },
@@ -893,6 +991,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Educational/Special Needs Costs",
                   "label": "Children's educational or other special needs (specify below)"
               }
@@ -910,6 +1009,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Extraordinary Health Expenses",
                   "label": "Extraordinary health expenses not included in 18b"
               },
@@ -917,6 +1017,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Uninsured Major Losses",
                   "label": "Major losses not covered by insurance (examples: fire, theft, other insured loss)"
               },
@@ -924,6 +1025,7 @@
               {
                   "type": "number",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Expenses for Other Children",
                   "label": "(1) Expenses for my minor children who are from other relationships and are living with me"
               },
@@ -931,6 +1033,7 @@
               {
                   "type": "string",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Other Children's Information",
                   "label": "(2) Names and ages of those children (specify)"
               },
@@ -953,8 +1056,9 @@
           {
               "other":
               {
-                  "type": "string",
+                  "type": "text",
                   "displayType": "Input",
+                  "inputType": "Input",
                   "description": "Other information",
                   "label": ""
               }

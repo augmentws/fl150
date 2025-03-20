@@ -8,16 +8,17 @@ export default function Home() {
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
-    if(value !== "default"){
-    setSelectedForm(value);
+    if (value !== "default") {
+      setSelectedForm(value);
     }
   };
+
   useEffect(() => {
 
     if (selectedForm !== "default") {
-        if(window.location.pathname !== `/form/${selectedForm}`)
-          router.push(`/form/${selectedForm}`);
-      }
+      if (window.location.pathname !== `/form/${selectedForm}`)
+        router.push(`/form/${selectedForm}`);
+    }
   }, [selectedForm, router]);
 
   return (

@@ -32,23 +32,23 @@ const ArrayInputField: React.FC<ArrayInputFieldProps> = ({ properties, data, onC
   };
   return (
     <div className="input-table">
-      <table className="border border-collapse w-full">
+      <table className="border-collapse table-fixed border w-full">
         <thead>
-          <tr className="text-sm border border-black">
+          <tr className="border">
             {columnHeaders.map((header) => (
-              <th key={header.key}>{header.label}</th>
+              <th key={header.key} className='border text-sm'>{header.label}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex + 'row'}>
+            <tr key={rowIndex + 'row'} className="">
               {Object.keys(row).map((key) => (
-                <td key={key + rowIndex} className='p-1'>
+                <td key={key + rowIndex} className='border p-1 text-sm'>
                   {
                     <input
-                      className="md:col-span-1 bg-gray-100 dark:bg-gray-400 border border-gray-300 rounded-md p-0"
-                      type="text"
+                      className="bg-gray-100 dark:bg-gray-400 border border-gray-300 rounded-md p-0 w-full"
+                      type={properties[key].inputType}
                       value={row[key]}
                       onChange={(e) => handleChange(rowIndex, key, e.target.value)}
                     />
@@ -59,7 +59,7 @@ const ArrayInputField: React.FC<ArrayInputFieldProps> = ({ properties, data, onC
           ))}
         </tbody>
       </table>
-      <button type="button" className='add-row-button text-sm rounded-md bg-black text-white p-1 m-1' onClick={handleAddRow}>add row +</button>
+      <button type="button" className='add-row-button text-sm rounded-md border dark:bg-white dark:text-black p-1 m-1' onClick={handleAddRow}>add row +</button>
     </div>
   );
 };

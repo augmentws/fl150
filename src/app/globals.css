@@ -18,23 +18,35 @@ html[data-theme='dark'] {
     --border: #374151;
     --aside-background: #0a0a0a; /* Dark background for aside in dark mode */
   }
+
+/* deal with need for non transparent backgrounds an bug in dark mode */
 html.light body header{
   background-color: white;
 }
+/*
 html.light .input-table table thead{
-  background-color: black;
   color:white;
+  border: black;
+  background-color: black; 
+  border-right: white; 
 }
-html.light .input-table table thead tr td{
-  border:1px solid white;
-  color:darkred;
+
+
+html.light .input-table table thead{
+  border:black;
 }
+
+html.light .input-table table tbody{
+  border: rgb(215, 22, 22);
+}
+
 html.light .input-table table tbody tr td{
-  border-color: white;
+  border:1px solid black;
 }
 html.light .input-table table{
   border-color: black;
 }
+  */
 .form-input-container {
   display: flex;
   align-items: center;

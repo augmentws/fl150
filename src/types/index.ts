@@ -1,12 +1,14 @@
+import { List } from "postcss/lib/list";
 
 export interface InputSchema {
   type: string;
   description?: string;
   properties?: Properties;
+  enum?:string[];
+  inputType: string;
   items?: {
       properties?: Properties
   };
-
   displayType?: string;
   label: string;
 }
