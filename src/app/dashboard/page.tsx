@@ -1,5 +1,5 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"; // Adjust path if needed
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../../lib/authOptions"; // Adjust path if needed
 import { redirect } from "next/navigation"; // For server redirects
 import Dashboard from "@/components/Dashboard"; // Or wherever your component lives
 
