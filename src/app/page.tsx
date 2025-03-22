@@ -17,7 +17,7 @@ export default function Home() {
 
     if (selectedForm !== "default") {
       if (window.location.pathname !== `/form/${selectedForm}`)
-        router.push(`/form/${selectedForm}`);
+        router.push(`/upload/${selectedForm}`);
     }
   }, [selectedForm, router]);
 

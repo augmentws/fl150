@@ -8,6 +8,7 @@ export interface InputSchema {
       properties?: Properties
   };
   displayType?: string;
+  defaultValue?:any;
   label: string;
 }
 export type Properties = {

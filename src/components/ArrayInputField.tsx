@@ -47,7 +47,7 @@ const ArrayInputField: React.FC<ArrayInputFieldProps> = ({ properties, data, onC
                 <td key={key + rowIndex} className='border p-1 text-sm'>
                   {
                     <input
-                      className="bg-gray-100 dark:bg-gray-400 border border-gray-300 rounded-md p-0 w-full"
+                      className="bg-gray-50 dark:bg-gray-100 border border-gray-300 rounded-md p-0 w-full"
                       type={properties[key].inputType}
                       value={row[key]}
                       onChange={(e) => handleChange(rowIndex, key, e.target.value)}

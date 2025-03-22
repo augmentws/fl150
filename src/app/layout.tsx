@@ -3,6 +3,7 @@ import * as React from 'react';
 import './globals.css'
 import { ThemeProvider } from './providers'
 import { Toggle } from '../components/ui/toggle';
+import LogoutButton from '@/components/ui/logoutButton';
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -16,12 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <body className="flex min-h-screen flex-col">
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <header className="fixed top-0 left-0 right-0 justify-between h-16 flex items-center px-4 z-50 shadow bg-white dark:bg-black">
             <Link href="/">Home</Link>
-            <Toggle />
+            <div className="session flex items-center space-x-2">
+              <LogoutButton />
+              <Toggle />
+            </div>
           </header>
           {/* Page Content */}
           {children}

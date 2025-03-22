@@ -3,6 +3,7 @@ import React from 'react';
 import InputField from './InputField';
 import ArrayInputField from './ArrayInputField';
 import { InputSchema, Section } from '../types';
+import { buildSectionsFromSchema } from '../utils/buildSections';
 
 interface FormData {
   [key: string]: any;
@@ -10,10 +11,11 @@ interface FormData {
 
 interface FormRendererProps {
   schema: any;
+  prefill?: Record<string, any>;
 }
 
-const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
-
+const FormRenderer: React.FC<FormRendererProps> = ({ schema, prefill = {} }) => {
+  console.log("PREFIL\n" + JSON.stringify(prefill, null, 2));
   const [formData, setFormData] = React.useState<FormData>({});
   const handleInputChange = (fieldName: string, value: any) => {
     console.log(`Field: ${fieldName}, Value: ${value}`);
@@ -29,37 +31,23 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
       [fieldName]: data,
     }));
   };
-  const sections: Section[] = [];
-
   const handleNavClick = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+
+    requestAnimationFrame(() => {
+      const headerOffset = 64;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset - 40;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    });
   };
 
-  for (const [key, value] of Object.entries(schema.properties)) {
-    const inputSchema = value as InputSchema;
-    if (inputSchema.type === "object" && inputSchema.properties) {
-      if (inputSchema.displayType === 'Section') {
-        sections.push({
-          label: inputSchema.label,
-          description: inputSchema.description || '',
-          properties: inputSchema.properties
-        })
-      } else {
-        for (const [subKey, subValue] of Object.entries(inputSchema.properties)) {
-          sections.push({
-            label: (subValue as InputSchema).label || subKey,
-            properties: { [subKey]: subValue as InputSchema },
-          });
-        }
-      }
-    } else {
-      sections.push({
-        label: inputSchema.label || key,
-        properties: { [key]: inputSchema },
-      });
-    }
-  }
-
+  const sections: Section[] = buildSectionsFromSchema(schema, prefill);
 
   return (
     <div className="pt-16 flex flex-1 gap-4">
@@ -111,7 +99,7 @@ const FormRenderer: React.FC<FormRendererProps> = ({ schema }) => {
                     );
                   }
                   return (
-                    <InputField key={fieldKey} fieldName={fieldKey} schema={fieldValue} value={formData[fieldKey] || ''} onChange={handleInputChange} />
+                    <InputField key={fieldKey} fieldName={fieldKey} schema={fieldValue} value={formData[fieldKey] ?? fieldValue.defaultValue ?? ''} onChange={handleInputChange} />
                   );
 
                 })}
