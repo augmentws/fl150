@@ -1,9 +1,8 @@
 import UploadPage from './uploadPage';
 type Props = {
-    params: { formName: string };
-    searchParams: { [key: string]: string | string[] | undefined };
+    params: Promise<{ formName: string }>;
+    searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
-
 
 export async function generateMetadata({ params }: Props) {
     const resolvedParams = await params; // Await it!
