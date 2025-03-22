@@ -2,14 +2,17 @@
 import { useState } from 'react';
 
 export default function FileUploadForm() {
-    const [file, setFile] = useState(null);
+    const [file, setFile] = useState<File | null>(null);
     const [uploadStatus, setUploadStatus] = useState('');
 
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]);
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const files = e.target.files;
+        if (files && files.length > 0) {
+            setFile(files[0]);
+        }
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!file) return;
 
