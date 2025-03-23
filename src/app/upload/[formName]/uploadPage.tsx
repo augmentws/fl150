@@ -62,7 +62,7 @@ export default function UploadPage() {
                         htmlFor="file"
                         className="block text-sm font-medium text-gray-700"
                     >
-                        Choose File
+                        Upload a Pay stub
                     </label>
                     <input
                         id="file"
