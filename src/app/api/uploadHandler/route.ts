@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       const queryHeader = new Headers(gemini_headers);
       const path = join(GEMINI_BASE_URL, GEMINI_MODEL_PATH).replace('{MODEL}', GEMINI_MODEL);
       console.log('Upload URL:'+path);
-      console.log(updatedPayStub);
+      console.log("AI Request: \n"+JSON.stringify(updatedPayStub));
       const infoResponse = await fetch(
         path,
         {

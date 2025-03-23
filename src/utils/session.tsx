@@ -1,6 +1,5 @@
 import { cookies } from 'next/headers';
 import { getIronSession, IronSession } from 'iron-session';
-console.log('SESSION_SECRET:', process.env.SESSION_SECRET);
 export const sessionOptions = {
     password: process.env.SESSION_SECRET as string,
     cookieName: 'nextjs-session',

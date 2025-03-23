@@ -28,8 +28,6 @@ const InputField: React.FC<InputFieldProps> = ({ fieldName, schema, value, onCha
   };
 
   const label = schema.label !== undefined ? schema.label : fieldName;
-  console.log('value: ' + JSON.stringify(value))
-  console.log('schema: ' + JSON.stringify(schema))
   let inputElement;
   if (schema.enum) {
     inputElement = (
