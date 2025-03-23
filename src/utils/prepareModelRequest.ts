@@ -6,5 +6,6 @@ export function prepareModelRequest(payStubJson: any, mime: string, id: string):
         fileData.file_uri = fileData.file_uri.replace('{id}', id);
       }
     }
+    console.log("AI Request: \n"+payStubJson);
     return payStubJson;
   }
