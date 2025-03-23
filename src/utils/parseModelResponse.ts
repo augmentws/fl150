@@ -9,6 +9,7 @@ export function parseModelResponse(response:any) {
   
       // Extract the JSON inside the ```json ... ``` block
       const jsonMatch = rawText.match(/```json\s*([\s\S]*?)\s*```/);
+      console.log("Extracted AI Result:"+jsonMatch);
   
       if (!jsonMatch || jsonMatch.length < 2) {
         throw new Error('No JSON block found inside the text.');

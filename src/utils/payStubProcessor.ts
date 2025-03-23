@@ -47,7 +47,7 @@ type PayStubInputData = {
   
      const output: EmploymentData = {
         employer: payData.employer,
-        employers_address: payData.employee_address,
+        employers_address: payData.employers_address,
         employee_name: payData.employee_name ,
         employee_address: payData.employee_address,
         paid_weekly: false,
